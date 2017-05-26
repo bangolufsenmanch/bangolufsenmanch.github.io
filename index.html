@@ -2,20 +2,48 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Lean Fit Project</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:300,400" rel="stylesheet">
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				moveBackgroundImage();
+
+				$(window).resize(function(){
+					moveBackgroundImage();
+				})
+			});
+
+			function moveBackgroundImage(){
+				if($(window).width() < 1170 && $(window).width() > 925){
+					var adjust = ($(window).width() - 1170)
+
+				} else if($(window).width() <= 925){
+					var adjust = 925 - 1170;
+				} else{
+					var adjust = 0;
+				}
+				$("#section1").css({"background-position": adjust});
+			}
+		</script>
 
 	</head>
 	<body>
 		<section id="section1">
-			<div id="section1Container">
-				<img src="/images/lfpLogo.png" alt="" id="logo"/>
-				<h2>Lifestyle Coaching & Support</h2>
-				<h3>6 week summer lean fit challenge</h3>
-				<button type="button" name="button">Click Here to Claim Your Spot</button>
+			<div class="greyOut">
+				<div id="section1Container">
+					<img src="/images/lfpLogo.png" alt="" id="logo"/>
+					<h2>Lifestyle Coaching & Support</h2>
+					<h3>6 Week Summer Lean Fit Project</h3>
+					<button type="button" name="button">Click Here to Claim Your Spot</button>
+				</div>
 			</div>
 		</section>
 			<!-- end of section 1 -->
@@ -26,21 +54,23 @@
 		<section id="section2">
 			<div id="section2Container">
 				<h3>Limited Availability</h3>
-				<p>This 6 Week Summer Lean Fit Challenge specifically designed for women over
-					30 who want to get out of pain and will help gently guide you into a sustainable
-					lifestyle programme which will leave you feeling as though you've taken the pressure off.
+				<p>This 6 Week Summer Lean Fit Project is specifically designed for
+					women of all fitness levels who want to lose weight, improve their
+					health and fitness and have the confidence you deserve.
 				</p>
 
-				<p>Over the course of the 6 weeks, you will receive expert teaching, accountability, education
-					and work in 1 to 1 private lessons. You must fit the following criteria to apply:
+				<p>Over the course of the 6 week programme, you will receive expert coaching,
+					accountability and work in a small group with with one of our LFP coaches.
 				</p>
+
+				<p>You must fit the following criteria to apply:</p>
 
 				<ul>
-					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Positive attitude.</li>
-					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Looking to live pain free, and improve living quality.</li>
-					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Can dedicate 45 minutes and can commit at least 1 time a week to train at our facility.</li>
-					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Are willing to listen, apply our coaching to change your lifestyle.</li>
+					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Have a positive attitude.</li>
+					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You are looking to seriously improve your fitness.</li>
 					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Must be willing to invest time and money into themselves.</li>
+					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Are willing to listen & apply our coaching to change your lifestyle.</li>
+					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Can commit to 3 x 45 minute sessions per week at our facility in Bury</li>
 				</ul>
 
 				<button type="button" name="button">Click Here to Claim Your Spot</button>
@@ -57,10 +87,9 @@
 				<div id="section3List">
 					<h3>This is for you if...</h3>
 					<ul>
-						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're a woman between the age of 30 and 54 and you want to lose 10-15lbs.</li>
-						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You've previously tried numerous diets and weight loss programs and HAVE NOT gotten the results that you want and you want to know why... </li>
-						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You feel you DON'T HAVE TIME to spend hours working out and you want to learn how you can transform your body without spending tons of time in the gym and/or kitchen.</li>
-						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You want to dramatically improve the quality of your relationships.</li>
+						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're a woman between the age of 30 and 54 and you want to improve your health and fitness</li>
+						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You've previously tried numerous diets and weight loss programmes and HAVE NOT got the results that you want and you want to know why...  </li>
+						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You feel you DON'T HAVE TIME to spend hours working out and you want to learn how you can transform your body without spending tons of time in the gym and/or the kitchen.</li>
 						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You have ever struggled with staying motivated and remaining consistent in your workouts or your eating habits.</li>
 						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're fed up with not being able to fit into the clothes that make you feel more comfortable, confident and self-assured.</li>
 						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're sick and tired of struggling to lose weight and want a program that's guaranteed to get results or gives you your Money Back!</li>
@@ -80,9 +109,9 @@
 		<section id="section4">
 			<h2>Key to turning your life around</h2>
 			<div class="row">
-				<p> <b>The Kickstarter Pack: </b> an overview of the the framework for the programme outlining the key principles to ensure your succeed <br /><br />
- 					<b>A Strategy Session:</b> an in:itial coaching and strategy session to map out the 6 week based on your unique goals and lifestyle <br /><br />
-					<b>The Exercise System:</b> personal training sessions to help kickstart your weight loss, tone your muscles and reshape your body
+				<p> <b>A strategy call: </b> gives you an overview of the programme in a 15 minute phone call to explain all about our amazing 6 week LFP course and answer any questions you may have. <br /><br />
+ 					<b>30 Minute Assessment:</b> before starting with us every client goes through the LFP assessment which takes a look at your general health, mobility and strength, this gives us a good idea of your current fitness levels. <br /><br />
+					<b>The Exercise System:</b> The results of your assessment allows us to personalise your exercise programme and give you your very own personal training plan.
 				</p>
 				<img src="/images/fbReview2.png" alt="" />
 			</div>
@@ -90,20 +119,21 @@
 			<div class="row">
 				<img src="/images/fbReview3.png" alt="" />
 				<p>
-					<b>The Nutrition System:</b> complete nutritional guidance for the 6 week period to fuel your exercise and kickstart your fat burning <br /><br />
- 					<b>Lifestyle Coaching:</b> an introduction to healthier living, better sleep and less stress through simple lifestyle changes<br /><br />
-					<b>Support Framework:</b> on-going email support and encouragement from your coach to keep you motivated between sessions<br /><br />
+					<b>The Nutrition System:</b> you will receive a fully personalised 6 week nutrition programme from our very own in house nutritionist. <br /><br />
+ 					<b>Tracking:</b> we track your progress through the 6 week programme with access to our online tracking software. Set personal records and give high 5's to your gym buddies<br /><br />
+					<b>Support Framework:</b> we are on hand to help you in way we can. We offer full email support on issue you might have from your workouts to your nutrition.<br /><br />
 				</p>
 			</div>
 
-			<div class="row">
+			<!-- <div class="row">
 				<p>
 					<b class="big">….and the best bit?</b> <br/> <br/>
 					You’ll receive <b>100% undivided 1-on-1 attention</b> from your coach in our private personal training studio gym here in Bury,
 					away from the crowded, noisy and intimidating public gyms
 				</p>
 				<img src="/images/fbReview4.png" alt="">
-			</div>
+			</div> -->
+
 			<button type="button" name="button">Click here to claim your spot</button>
 
 		</section>
@@ -121,7 +151,7 @@
 				</div>
 
 				<div class="center big">
-					Louise lost over a stone !<br/>
+					Louise lost over a stone with Lean Fit Project !<br/>
 					<iframe src="https://fast.wistia.net/embed/iframe/uvtbiecsh9?autoPlay=0&amp;playerPreference=html5&amp;wmode=transparent" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" wmode="opaque" id="fitvid446466"></iframe>
 				</div>
 			</div>
@@ -159,6 +189,8 @@
 			</p>
 			<button type="button" name="button">Click here to claim your spot</button>
 		</section>
+
+		<footer>Lean Fit Project - All Rights Reserved</footer>
 
 	</body>
 </html>

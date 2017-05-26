@@ -1,6 +1,12 @@
 body{
 	margin: 0;
 	overflow-x: hidden;
+	width: 100%;
+}
+
+:root{
+	--font: "Nunito", sans-serif;
+	--green: rgb(32, 159, 121);
 }
 
 .row{
@@ -20,79 +26,174 @@ body{
 	background-image: url("/images/headerImage.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: 0 0;
 	height: 99vh;
 }
 
 #section1Container{
 	position: absolute;
 	top: 100px;
-	left: 760px;
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--font);
 }
 
-#section1Container > #logo{
-	width: 400px;
+@media only screen and (min-width: 630px){
+	#section1Container{
+		left: calc(100% - 500px);
+	}
 }
 
-#section1Container > h2, h3{
+@media only screen and (max-width: 629px){
+	#section1Container{
+		display: block;
+		left: 13%;
+		top: 50px;
+	}
 
-	position: relative;
+	.greyOut{
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba(88, 88, 88, 0.8);
+	}
 }
 
-#section1Container > h2{
-	font-size: 30px;
-	font-weight: 300;
-	top: -50px;
-	left: 20px;
+@media only screen and (min-width: 500px){
+	#section1Container > #logo{
+		width: 400px;
+	}
+
+	#section1Container > h2, h3{
+		position: relative;
+	}
+
+	#section1Container > h2{
+		font-size: 30px;
+		font-weight: 300;
+		top: -50px;
+		left: 20px;
+	}
+
+	#section1Container > h3{
+		top: -70px;
+		left: -20px;
+		font-weight: 400;
+		font-size: 30px;
+		color: rgb(32, 159, 121);
+		text-align: center;
+	}
+
+	#section1Container > button {
+		position: relative;
+		top: -50px;
+		left: 35px;
+		width: 350px;
+		font-size: 20px;
+		font-weight: 400;
+		border-radius: 20px;
+		border: none;
+		padding: 15px;
+		outline: none;
+		cursor: pointer;
+		border: solid 2px rgb(32, 159, 121);
+		background-color: white;
+	}
+
+	#section1Container > button:hover {
+		background-color: var(--green);
+	}
+
+	#section1Container > button:active{
+		padding: 10px;
+		top: -45px;
+		left: 40px;
+		font-size: 18px;
+		width: 340px;
+		outline: none;
+	}
 }
 
-#section1Container > h3{
-	top: -70px;
-	left: -30px;
-	font-weight: 400;
-	font-size: 30px;
-	color: rgb(32, 159, 121);
-}
+@media only screen and (max-width: 499px){
 
-#section1Container > button {
-	position: relative;
-	top: -50px;
-	left: 35px;
-	width: 350px;
-	font-size: 20px;
-	font-weight: 400;
-	border-radius: 20px;
-	border: none;
-	padding: 15px;
-	outline: none;
-	cursor: pointer;
-	border: solid 2px rgb(32, 159, 121);
-	background-color: white;
-}
+	#section1Container > #logo{
+		width: 300px;
+	}
 
-#section1Container > button:active{
-	padding: 10px;
-	top: -45px;
-	left: 40px;
-	font-size: 18px;
-	width: 340px;
-	outline: none;
-	color: black;
+	#section1Container > h2, h3{
+		position: relative;
+		text-align: center;
+		font-size: 25px;
+	}
+
+	#section1Container > h2{
+		font-weight: 300;
+		top: -50px;
+		left: -20px;
+	}
+
+	#section1Container > h3{
+		top: -70px;
+		left: -20px;
+		font-weight: 400;
+		color: rgb(32, 159, 121);
+		text-align: center;
+	}
+
+	#section1Container > button {
+		margin-left: 50px;
+		width: 200px;
+		font-size: 20px;
+		font-weight: 400;
+		border-radius: 20px;
+		border: none;
+		padding: 15px;
+		outline: none;
+		cursor: pointer;
+		border: solid 2px rgb(32, 159, 121);
+		background-color: white;
+	}
+
+	#section1Container > button:hover {
+		background-color: var(--green);
+	}
+
+	#section1Container > button:active{
+		padding: 10px;
+		top: -45px;
+		left: 40px;
+		font-size: 18px;
+		width: 340px;
+		outline: none;
+	}
 }
 
 #section2{
 	background-color: rgba(255, 255, 255, 0.5);
-	height: 90vh;
+	height: auto;
 }
 
-#section2Container{
-	margin: 10px 5px;
-	border: solid 8px rgb(180, 180, 180);
-	padding: 10px 80px;
-	text-align: center;
-	font-family: "Open Sans", sans-serif;
+@media only screen and (min-width: 550px){
+	#section2Container{
+		margin: 10px 5px;
+		border: solid 8px rgb(180, 180, 180);
+		padding: 10px 80px;
+		text-align: center;
+		font-family: var(--font);
+	}
 }
+
+@media only screen and (max-width: 549px){
+	#section2Container{
+		margin: 10px 5px;
+		border: solid 8px rgb(180, 180, 180);
+		padding: 10px 40px;
+		text-align: center;
+		font-family: var(--font);
+	}
+}
+
+
 
 #section2Container > h3 {
 	font-size: 30px;
@@ -105,29 +206,53 @@ body{
 
 #section2Container > ul{
 	text-align: left;
-	position: relative;
-	left: 250px;
+	margin: auto;
 	list-style: none;
 	font-size: 18px;
-	width: 600px;
+	width: auto;
 }
+
 .fa-check{
 	color: green;
 	margin-right: 15px;
 }
 
-#section2Container > button {
-	margin: 20px 0px;
-	width: 350px;
-	font-size: 20px;
-	font-weight: 400;
-	border-radius: 20px;
-	border: none;
-	padding: 15px;
-	outline: none;
-	cursor: pointer;
-	border: solid 2px rgb(32, 159, 121);
-	background-color: white;
+@media only screen and (min-width: 450px){
+	#section2Container > button {
+		display: block;
+		margin: 30px auto;
+		width: 350px;
+		font-size: 20px;
+		font-weight: 400;
+		border-radius: 20px;
+		border: none;
+		padding: 15px;
+		outline: none;
+		cursor: pointer;
+		border: solid 2px rgb(32, 159, 121);
+		background-color: white;
+	}
+}
+
+@media only screen and (max-width: 449px){
+	#section2Container > button {
+		display: block;
+		margin: 30px auto;
+		width: auto;
+		font-size: 20px;
+		font-weight: 400;
+		border-radius: 20px;
+		border: none;
+		padding: 15px;
+		outline: none;
+		cursor: pointer;
+		border: solid 2px rgb(32, 159, 121);
+		background-color: white;
+	}
+}
+
+#section2Container > button:hover {
+	background-color: var(--green);
 }
 
 #section2Container > button:active{
@@ -137,17 +262,17 @@ body{
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-	color: black;
 }
 
 #section3{
-	font-family: "Open Sans", sans-serif;
-	margin: 0px 30px;
-	padding-bottom: 60px;
+	font-family: var(--font);
+	margin: 0px 0px;
+	padding-bottom: 10px;
 	border-bottom: 4px rgb(32, 159, 121) dashed;
 }
 
 #section3 > h2 {
+	width: 100%;
 	color: rgb(32, 159, 121);
 	text-align: center;
 	font-size: 30px;
@@ -155,11 +280,6 @@ body{
 
 #section3Container{
 	display: flex;
-}
-
-#section3List{
-	width: 1000px;
-	font-size: 18px;
 }
 
 #section3List > ul li {
@@ -172,25 +292,127 @@ body{
 	font-size: 23px;
 }
 
-#section3Column{
-	position: relative;
-	left: 100px;
+
+
+@media only screen and (min-width: 1100px){
+	#section3List{
+		width: auto;
+		font-size: 18px;
+	}
+
+	#section3Column{
+		margin-left: 100px;
+	}
+
+	#section3Column > .video {
+		position: relative;
+		top: -50px;
+		height: 400px;
+		width: 500px;
+	}
+
+	#section3Column > img {
+		box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+	}
 }
 
-#section3Column > .video {
-	position: relative;
-	top: -50px;
-	height: 400px;
-	width: 500px;
+@media only screen and (max-width: 1099px){
+	#section3List{
+		width: auto;
+		font-size: 18px;
+	}
+
+	#section3Column{
+		margin-left: 100px;
+	}
+
+	#section3Column > .video {
+		position: relative;
+		top: -50px;
+		left: 30px;
+		width: 350px;
+		height: 280px;
+	}
+
+	#section3Column > img {
+		box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+		width: 400px;
+	}
 }
 
-#section3Column > img {
-	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+@media only screen and (max-width: 970px){
+	#section3List{
+		display: block;
+		margin: 30px auto;
+		width: 70vw;
+		font-size: 18px;
+	}
+
+	#section3Column{
+		margin-left: 0px;
+	}
+
+	#section3Container{
+		flex-direction: column-reverse;
+	}
+
+	#section3Column > .video {
+		display: block;
+		margin: 0px auto;
+		height: 400px;
+		width: 500px;
+	}
+
+	#section3Column > img {
+		display: block;
+		width: auto;
+		box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	#section3 > h2{
+		height: 120px;
+	}
+
+	#section3List{
+		display: block;
+		margin: 30px auto;
+		width: 90vw;
+		font-size: 18px;
+	}
+
+	#section3Column{
+		margin-left: 0px;
+	}
+
+	#section3Container{
+		flex-direction: column-reverse;
+	}
+
+	#section3Column > .video {
+		display: block;
+		height: 280px;
+		width: 350px;
+	}
+
+	#section3Column > img {
+		display: block;
+		width: 350px;
+		box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+		margin: 0 auto;
+	}
+
+	#section3List > ul{
+		padding: 0px;
+	}
 }
 
 #section3List > button {
-	margin: 20px 0px;
-	width: 350px;
+	display: block;
+	margin: 20px auto;
+	width: auto;
 	font-size: 20px;
 	font-weight: 400;
 	border-radius: 20px;
@@ -200,8 +422,10 @@ body{
 	cursor: pointer;
 	border: solid 2px rgb(32, 159, 121);
 	background-color: white;
-	position: relative;
-	left: 150px;
+}
+
+#section3List > button:hover {
+	background-color: var(--green);
 }
 
 #section3List > button:active{
@@ -211,11 +435,15 @@ body{
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-	color: black;
 }
 
+
+
+
+
 #section4{
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--font);
+	width: 100%;
 }
 
 #section4 > h2{
@@ -226,13 +454,39 @@ body{
 
 #section4 > div {
 	justify-content: space-around;
-	margin-top: 60px;
+	margin-top: 20px;
+	margin-left: 30px;
 }
 
-#section4 p {
-	width: 550px;
-	font-size: 16px;
+@media only screen and (min-width: 1001px){
+	#section4 p {
+		width: 550px;
+		font-size: 16px;
+	}
 }
+
+@media only screen and (max-width: 1000px){
+	#section4 > div{
+		margin: 30px auto;
+		flex-direction: column;
+	}
+	#section4 p {
+		width: 550px;
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	#section4 img{
+		width: 90vw;
+	}
+
+	#section4 p{
+		width: 90vw;
+	}
+}
+
+
 
 #section4 > button {
 	display: block;
@@ -250,6 +504,10 @@ body{
 	text-align: center;
 }
 
+#section4 > button:hover {
+	background-color: var(--green);
+}
+
 #section4 > button:active{
 	padding: 10px;
 	margin-top: 25px;
@@ -257,14 +515,18 @@ body{
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-	color: black;
 }
 
+
+
+
+
 #section5{
-	padding: 30px;
-	font-family: "Open Sans", sans-serif;
+
+	font-family: var(--font);
 	background-color: rgba(200, 200, 200, 0.5);
 	height: auto;
+	width: 100%;
 }
 
 #section5 > h2{
@@ -272,19 +534,81 @@ body{
 	color: rgb(32, 159, 121);
 }
 
-#section5 > .row {
-	justify-content: space-around;
-	margin-bottom: 50px;
+@media only screen and (min-width: 1051px){
+	#section5 > .row {
+		justify-content: space-around;
+		margin-bottom: 50px;
+	}
+
+	#section5 iframe {
+		width: 400px;
+		height: 280px;
+	}
 }
 
-#section5 iframe {
-	width: 400px;
-	height: 280px;
+@media only screen and (max-width: 1050px){
+	#section5 > .row {
+		/*align-items: center;*/
+		flex-direction: column;
+	}
+
+	#section5 iframe {
+		width: 400px;
+		height: 280px;
+	}
 }
 
-#section6 {
-	padding: 40px 100px;
-	font-family: "Open Sans", sans-serif;
+@media only screen and (max-width: 600px){
+	#section5 > .row {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#section5 iframe {
+		width: 300px;
+		height: 214px;
+	}
+
+	#section5 > h2{
+		margin: 0px auto;
+	}
+}
+
+
+
+@media only screen and (min-width: 1001px){
+	#section6 {
+		padding: 40px 100px;
+		font-family: var(--font);
+	}
+
+	#section6 p {
+		width: 500px;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	#section6 {
+		padding: 40px 20px;
+		font-family: var(--font);
+	}
+
+	#section6 p {
+		width: 500px;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	#section6 > .row {
+		flex-direction: column;
+	}
+
+	#section6 p {
+		width: 80vw;
+		font-size: 20px;
+	}
 
 }
 
@@ -294,34 +618,53 @@ body{
 
 #section6 img {
 	width: 270px;
+	padding: 10px;
 }
 
-#section6 p {
-	width: 500px;
-	font-size: 20px;
-}
+
 
 #section6 span{
-	color: rgb(32, 159, 121);
+	color: var(--green);
 	font-weight: 400;
 }
 
+
+
+
+
+
 #section7{
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--font);
 	padding-top: 30px;
+	width: 100%;
 }
 
-#section7 > h2{
-	width: 750px;
-	margin: 0px auto;
+@media only screen and (min-width: 601px){
+	#section7 > h2{
+		width: 60vw;
+		margin: 0px auto;
+	}
+
+	#section7 > p {
+		width: 65vw;
+		margin: 40px auto;
+		font-size: 18px;
+	}
 }
 
-#section7 > p {
-	width: 800px;
-	margin: 40px auto;
-	font-size: 18px;
-}
+@media only screen and (max-width: 600px){
+	#section7 > h2{
+		width: 85vw;
+		margin: 0px auto;
+		text-align: center;
+	}
 
+	#section7 > p {
+		width: 90vw;
+		margin: 40px auto;
+		font-size: 18px;
+	}
+}
 
 #section7 > button {
 	display: block;
@@ -339,6 +682,10 @@ body{
 	text-align: center;
 }
 
+#section7 > button:hover {
+	background-color: var(--green);
+}
+
 #section7 > button:active{
 	padding: 10px;
 	margin-top: 45px;
@@ -346,5 +693,16 @@ body{
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-	color: black;
+}
+
+button:hover {
+	color: white;
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	font-family: var(--font);
+	font-size: 18px;
+	margin-bottom: 20px;
 }
