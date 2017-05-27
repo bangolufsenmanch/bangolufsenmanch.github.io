@@ -4,6 +4,10 @@ body{
 	width: 100%;
 }
 
+a{
+	text-decoration: none;
+}
+
 :root{
 	--font: "Nunito", sans-serif;
 	--green: rgb(32, 159, 121);
@@ -84,7 +88,7 @@ body{
 		text-align: center;
 	}
 
-	#section1Container > button {
+	#section1Container button {
 		position: relative;
 		top: -50px;
 		left: 35px;
@@ -100,18 +104,18 @@ body{
 		background-color: white;
 	}
 
-	#section1Container > button:hover {
+	#section1Container button:hover {
 		background-color: var(--green);
 	}
 
-	#section1Container > button:active{
+	/*#section1Container button:active{
 		padding: 10px;
 		top: -45px;
 		left: 40px;
 		font-size: 18px;
 		width: 340px;
 		outline: none;
-	}
+	}*/
 }
 
 @media only screen and (max-width: 499px){
@@ -140,7 +144,7 @@ body{
 		text-align: center;
 	}
 
-	#section1Container > button {
+	#section1Container button {
 		margin-left: 50px;
 		width: 200px;
 		font-size: 20px;
@@ -154,18 +158,18 @@ body{
 		background-color: white;
 	}
 
-	#section1Container > button:hover {
+	#section1Container button:hover {
 		background-color: var(--green);
 	}
 
-	#section1Container > button:active{
+	/*#section1Container button:active{
 		padding: 10px;
 		top: -45px;
 		left: 40px;
 		font-size: 18px;
 		width: 340px;
 		outline: none;
-	}
+	}*/
 }
 
 #section2{
@@ -218,7 +222,7 @@ body{
 }
 
 @media only screen and (min-width: 450px){
-	#section2Container > button {
+	#section2Container button {
 		display: block;
 		margin: 30px auto;
 		width: 350px;
@@ -235,7 +239,7 @@ body{
 }
 
 @media only screen and (max-width: 449px){
-	#section2Container > button {
+	#section2Container button {
 		display: block;
 		margin: 30px auto;
 		width: auto;
@@ -251,18 +255,18 @@ body{
 	}
 }
 
-#section2Container > button:hover {
+#section2Container button:hover {
 	background-color: var(--green);
 }
 
-#section2Container > button:active{
+/*#section2Container button:active{
 	padding: 10px;
 	margin-top: 25px;
 	margin-bottom: 27px;
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-}
+}*/
 
 #section3{
 	font-family: var(--font);
@@ -409,7 +413,7 @@ body{
 	}
 }
 
-#section3List > button {
+#section3List button {
 	display: block;
 	margin: 20px auto;
 	width: auto;
@@ -424,18 +428,18 @@ body{
 	background-color: white;
 }
 
-#section3List > button:hover {
+#section3List button:hover {
 	background-color: var(--green);
 }
 
-#section3List > button:active{
+/*#section3List button:active{
 	padding: 10px;
 	margin-top: 25px;
 	margin-bottom: 27px;
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-}
+}*/
 
 
 
@@ -488,7 +492,7 @@ body{
 
 
 
-#section4 > button {
+#section4 button {
 	display: block;
 	margin: 20px auto 40px;
 	width: 350px;
@@ -504,18 +508,18 @@ body{
 	text-align: center;
 }
 
-#section4 > button:hover {
+#section4 button:hover {
 	background-color: var(--green);
 }
 
-#section4 > button:active{
+/*#section4 button:active{
 	padding: 10px;
 	margin-top: 25px;
 	margin-bottom: 47px;
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-}
+}*/
 
 
 
@@ -666,7 +670,7 @@ body{
 	}
 }
 
-#section7 > button {
+#section7 button {
 	display: block;
 	margin: 20px auto 40px;
 	width: 350px;
@@ -682,21 +686,25 @@ body{
 	text-align: center;
 }
 
-#section7 > button:hover {
+#section7 button:hover {
 	background-color: var(--green);
 }
 
-#section7 > button:active{
+/*#section7 button:active{
 	padding: 10px;
 	margin-top: 45px;
 	margin-bottom: 47px;
 	font-size: 18px;
 	width: 340px;
 	outline: none;
-}
+}*/
 
 button:hover {
 	color: white;
+}
+
+button{
+	cursor: pointer;
 }
 
 footer{

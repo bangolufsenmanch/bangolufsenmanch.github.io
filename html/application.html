@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Application Page</title>
+
+		<link rel="stylesheet" href="/css/application.css">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var d = new Date().toISOString();
+				d = d.slice(0, -8);
+				$("#datetime").val(d);
+			});
+		</script>
+
+		<div class="container">
+			<h2>Complete the form to reserve your spot</h2>
+
+			<form class="" action="https://formspree.io/samsmith453@gmail.com" method="post">
+				<input class="textInput" type="text" name="FirstName" value="" placeholder="First Name" required> <br>
+				<input class="textInput" type="email" name="Email" value="" placeholder="Email Address" required> <br>
+				<input class="textInput" type="phone" name="Phone" value="" placeholder="Phone Number" required> <br>
+				<h4>What are your goals?</h4>
+				<textarea name="name">In 6 weeks I would like to...</textarea> <br>
+				<h4>Which of the following best describes you?</h4>
+				<select name="Selection">
+					<option value="excuse">An excuse maker that's always looking for a magic pill</option>
+					<option value="procrastinate">Procrastinator who always puts things off</option>
+					<option value="action">Action taker ready to commit and make changes now</option>
+				</select> <br>
+				<h4>When should we call you?</h4>
+				<input id="datetime" type="datetime-local" name="calltime" value="2017-01-01T12:00" required> <br><br>
+				<input type="hidden" name="_next" value="/html/thanks.html">
+				<input type="hidden" name="_subject" value="New submission" />
+				<input type="hidden" name="_cc" value="samsmith453@gmail.com" />
+				<input class="submit" type="submit" name="submit" value="Send">
+			</form>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>You have signed up</title>
+
+		<link rel="stylesheet" href="/css/thanks.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	</head>
+	<body>
+
+		<div class="container">
+			<img src="/images/lfplogo.png" alt="">
+			<h1>Congratulations on signing up for the 6 week Lean Fit Project.</h1>
+			<h3>We will call you shortly.</h3>
+			<div class="box">
+				In the meantime, you can view our social media for more inspiration: <br><br>
+				<a href="https://www.facebook.com/LEANFITPROJECT/" target="_blank"><i class="fa fa-3x fa-facebook"></i></a>
+				<a href="https://twitter.com/121_FIT" target="_blank"><i class="fa fa-3x fa-twitter"></i></a>
+				<a href="https://www.instagram.com/leanfitproject/" target="_blank"><i class="fa fa-3x fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$("i").hover(
+				function(){
+					var icon = $(this).attr("class").split(" ").pop();
+					icon = icon.slice(0, -7);
+					console.log(icon);
+					// $(this).removeClass(icon);
+				}, function onMoveAway(){
+					console.log("moved");
+				});
+			});
+
+		</script>
+	</body>
+</html>

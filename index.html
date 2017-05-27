@@ -6,7 +6,7 @@
 		<title>Lean Fit Project</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Nunito:300,400" rel="stylesheet">
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -18,6 +18,12 @@
 
 				$(window).resize(function(){
 					moveBackgroundImage();
+				})
+
+				$("button").click(function(){
+					console.log("click");
+					window.location = "/html/application.html";
+
 				})
 			});
 
@@ -42,7 +48,7 @@
 					<img src="/images/lfpLogo.png" alt="" id="logo"/>
 					<h2>Lifestyle Coaching & Support</h2>
 					<h3>6 Week Summer Lean Fit Project</h3>
-					<button type="button" name="button">Click Here to Claim Your Spot</button>
+					<a href="/html/application.html"><button type="button" name="button">Click Here to Claim Your Spot</button></a>
 				</div>
 			</div>
 		</section>
@@ -73,7 +79,7 @@
 					<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>Can commit to 3 x 45 minute sessions per week at our facility in Bury</li>
 				</ul>
 
-				<button type="button" name="button">Click Here to Claim Your Spot</button>
+				<a href="/html/application.html"><button type="button" name="button">Click Here to Claim Your Spot</button></a>
 
 			</div>
 		</section>
@@ -94,7 +100,7 @@
 						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're fed up with not being able to fit into the clothes that make you feel more comfortable, confident and self-assured.</li>
 						<li><i class="fa fa-check fa-lg" aria-hidden="true"></i>You're sick and tired of struggling to lose weight and want a program that's guaranteed to get results or gives you your Money Back!</li>
 					</ul>
-					<button type="button" name="button">Click Here to Claim Your Spot</button>
+					<a href="/html/application.html"><button type="button" name="button">Click Here to Claim Your Spot</button></a>
 				</div>
 				<div id="section3Column">
 					<iframe src="https://fast.wistia.net/embed/iframe/tbrqcz6n98?autoPlay=0&amp;playerPreference=html5&amp;wmode=transparent" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed video" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" wmode="opaque" id="fitvid214305"></iframe>
@@ -134,7 +140,7 @@
 				<img src="/images/fbReview4.png" alt="">
 			</div> -->
 
-			<button type="button" name="button">Click here to claim your spot</button>
+			<a href="/html/application.html"><button type="button" name="button">Click Here to Claim Your Spot</button></a>
 
 		</section>
 		<!-- end of section 4
@@ -187,7 +193,7 @@
 				experience for. If you would like to learn more and apply to see if you're possibly a
 				good fit for our services, click on the button below and begin the application process.
 			</p>
-			<button type="button" name="button">Click here to claim your spot</button>
+			<a href="/html/application.html"><button type="button" name="button">Click Here to Claim Your Spot</button></a>
 		</section>
 
 		<footer>Lean Fit Project - All Rights Reserved</footer>

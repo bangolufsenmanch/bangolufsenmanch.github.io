@@ -1,0 +1,43 @@
+:root{
+	--font: "Nunito", sans-serif;
+	--green: rgb(32, 159, 121);
+}
+
+body{
+	width: 100%;
+}
+
+img{
+	width: 30vw;
+	display: block;
+	margin: auto;
+}
+
+.container{
+	width: 90%;
+	margin: auto;
+	border: 8px solid var(--green);
+	font-family: var(--font);
+	text-align: center;
+	color: rgb(88, 88, 88);
+}
+
+h3{
+	font-size: 28px;
+}
+
+i{
+	color: white;
+	cursor: pointer;
+	margin: 0px 5px 20px 5px;
+	height: 48px;
+	width: 48px;
+	border-radius: 10px;
+	background-color: var(--green);
+	padding: 0px;
+}
+
+i:hover{
+	color: var(--green);
+	background-color: white;
+}
