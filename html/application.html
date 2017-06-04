@@ -6,8 +6,10 @@
 		<title>Application Page</title>
 
 		<link rel="stylesheet" href="/css/application.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link rel="icon" type="image/png" href="/images/favicon.png">
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 		<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="3334567e3aff4c78be566505eafad2c6d45ef56e06a844cd8ebec2de7dcb76a5",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};if(!o.noaa){z(b+"aa/"+t+'?'+p,false)};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
 	</head>
@@ -15,6 +17,9 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
+				if ( $('[type="datetime-local"]').prop('type') != 'datetime-local' ) {
+				    $('[type="datetime-local"]').datepicker();
+				}
 				var d = new Date().toISOString();
 				d = d.slice(0, -8);
 				$("#datetime").val(d);
@@ -37,7 +42,7 @@
 					<option value="action">Action taker ready to commit and make changes now</option>
 				</select> <br>
 				<h4>When should we call you?</h4>
-				<input id="datetime" type="datetime-local" name="calltime" value="2017-01-01T12:00" required> <br><br>
+				<input id="datetime" type="datetime-local" name="calltime" value="" required> <br><br>
 				<input type="hidden" name="_next" value="/html/thanks.html">
 				<input type="hidden" name="_subject" value="New submission" />
 				<input type="hidden" name="_cc" value="samsmith453@gmail.com" />
