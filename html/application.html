@@ -24,15 +24,19 @@
 			$(document).ready(function(){
 				var d = new Date().toISOString();
 				d = d.slice(0, -8);
+				var h= d.slice(11, 13);
 				if ( $('[type="datetime-local"]').prop('type') != 'datetime-local' ) {
-				    // $('[type="datetime-local"]').datepicker();
-					$("#datetime").datetimepicker();
-					d = d.replace("T", " ");
+					d = d.replace("T", " ")
+					$("#datetime").datetimepicker({
+						hour: h,
+						timeInput: true,
+						defaultValue: d
+					});
 
-				}
+
+				} else {
 					$("#datetime").val(d);
-
-
+				}
 			});
 		</script>
 
