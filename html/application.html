@@ -8,21 +8,31 @@
 		<link rel="stylesheet" href="/css/application.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link rel="icon" type="image/png" href="/images/favicon.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.js" charset="utf-8"></script>
 
-		<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="3334567e3aff4c78be566505eafad2c6d45ef56e06a844cd8ebec2de7dcb76a5",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};if(!o.noaa){z(b+"aa/"+t+'?'+p,false)};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+		<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="3334567e3aff4c78be566505eafad2c6d45ef56e06a844cd8ebec2de7dcb76a5",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};if(!o.noaa){z(b+"aa/"+t+'?'+p,false)};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});
+		</script>
 	</head>
 	<body>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				if ( $('[type="datetime-local"]').prop('type') != 'datetime-local' ) {
-				    $('[type="datetime-local"]').datepicker();
-				}
 				var d = new Date().toISOString();
 				d = d.slice(0, -8);
-				$("#datetime").val(d);
+				if ( $('[type="datetime-local"]').prop('type') != 'datetime-local' ) {
+				    // $('[type="datetime-local"]').datepicker();
+					$("#datetime").datetimepicker();
+					d = d.replace("T", " ");
+
+				}
+					$("#datetime").val(d);
+
+
 			});
 		</script>
 
